@@ -1,4 +1,4 @@
-const Discord = require("discord.js")
+const { MessageEmbed } = require("discord.js")
 const ms = require("ms")
 const m = require("../JSONS/mensagens.json")
 module.exports.run = async (client, message, args, db) => {
@@ -6,7 +6,7 @@ try {
 const pessoa = message.mentions.members.first()
 const tempo = args[1]
 
-  const embederro = new Discord.MessageEmbed()
+  const embederro = new MessageEmbed()
   .setTitle(`mute`)
   .setDescription(`${client.commands.get('mute').help.desc}`)
   .addField(`você não precisa de cargos!`, `meu comando de mute altera permissão direto para o usuário,mais simples e menos invasivo criando cargos em seu servidor!`)
