@@ -1,9 +1,9 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const m = require("../JSONS/mensagens.json")
 module.exports.run = async (client, message, args, db) => {
   try {
 let pessoa = message.mentions.members.first()
-const embederro = new Discord.MessageEmbed()
+const embederro = new MessageEmbed()
 .setTitle('expulsar!')
 .setDescription(`${client.commands.get('kick').help.desc}`)
 .addField(`exemplos:`, `**kick @pessoa <motivo> \nkick @young muito lindo!**`)
