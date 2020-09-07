@@ -1,0 +1,21 @@
+{
+  "name": "kleb",
+  "version": "1.0.0",
+  "description": "bot klebin",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api.alexflipnote": "^1.0.0",
+    "discord.js": "^12.3.1",
+    "firebase": "^7.19.1",
+    "fs": "0.0.1-security",
+    "jimp": "^0.16.1",
+    "moment": "^2.27.0",
+    "weather-js": "^2.0.0"
+  }
+}
