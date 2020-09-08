@@ -71,7 +71,7 @@ client.on('message', async message => { //coração dos comandos
     let cmd = args.shift().toLowerCase()
     var command = client.commands.get(cmd) || client.commands.get(client.aliases.get(cmd)) //procurar um comando com base no que o usuario escreveu
     if (!message.member.permissions.has(command.config.perm)) return message.reply(m.perms) //verificar as permissões do usuario
-    if (!message.guild.me.permissions.has(command.config.cperm)) return message.reply(m.noperms + ` \`\`${permission.config.cperm}\`\``) //verificar a permissão do bot
+    if (!message.guild.me.permissions.has(command.config.cperm)) return message.reply(m.noperms + ` \`\`${command.config.cperm}\`\``) //verificar a permissão do bot
     if(command.config.dev == true && message.author.id !== config.devID) return message.reply(":x: acesso negado pra você") // verificar os comandos exclusivos do dev,se o comando tiver como true na collecion e o id for diferente do JSON ele retorna a mensagem
     if(command) { try { 
         message.channel.startTyping(); //começar a digitar 
